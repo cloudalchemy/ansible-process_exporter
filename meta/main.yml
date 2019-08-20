@@ -4,6 +4,7 @@ galaxy_info:
   description: Deploy process_exporter
   license: MIT
   min_ansible_version: 2.6
+  role_name: process_exporter
   platforms:
     - name: Ubuntu
       versions:
