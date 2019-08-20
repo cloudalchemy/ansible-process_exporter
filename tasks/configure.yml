@@ -1,0 +1,9 @@
+---
+- name: Copy the process_exporter systemd service file
+  template:
+    src: process_exporter.service.j2
+    dest: /etc/systemd/system/process_exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart process_exporter

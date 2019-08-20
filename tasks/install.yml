@@ -1,0 +1,16 @@
+---
+- name: Create the process_exporter group
+  group:
+    name: "{{ process_exporter_system_group }}"
+    state: present
+    system: true
+
+- name: Create the process_exporter user
+  user:
+    name: "{{ process_exporter_system_user }}"
+    groups: "{{ process_exporter_system_group }}"
+    append: true
+    shell: /usr/sbin/nologin
+    system: true
+    createhome: false
+    home: /
