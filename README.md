@@ -8,11 +8,11 @@
 
 ## Description
 
-Deploy [process_exporter](https://github.com/ncabatoff/process_exporter) using ansible.
+Deploy [process_exporter](https://github.com/ncabatoff/process-exporter) using ansible.
 
 ## Requirements
 
-- Ansible >= 2.5 (It might work on previous versions, but we cannot guarantee it)
+- Ansible >= 2.6 (It might work on previous versions, but we cannot guarantee it)
 
 ## Role Variables
 
@@ -20,7 +20,10 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
+| `process_exporter_version` | "0.5.0" | Process exporter package version. Also accepts latest as parameter |
 | `process_exporter_web_listen_address` | "0.0.0.0:9256" | Address on which process_exporter will listen |
+| `process_exporter_config_dir` | "/etc/process_exporter" | Path to directory with process_exporter configuration |
+| `process_exporter_names` | [] | Processes which should be monitored. Syntax is the same as in https://github.com/ncabatoff/process-exporter#using-a-config-file |
 
 ## Example
 
@@ -32,10 +35,6 @@ Use it in a playbook as follows:
   roles:
     - cloudalchemy.process_exporter
 ```
-
-### Demo site
-
-We provide demo site for full monitoring solution based on prometheus and grafana. Repository with code and links to running instances is [available on github](https://github.com/cloudalchemy/demo-site) and site is hosted on [DigitalOcean](https://digitalocean.com).
 
 ## Local Testing
 
@@ -50,7 +49,7 @@ tox
 ```
 To run a custom molecule command on custom environment with only default test scenario:
 ```sh
-tox -e py27-ansible25 -- molecule test -s default
+tox -e py27-ansible28 -- molecule test -s default
 ```
 For more information about molecule go to their [docs](http://molecule.readthedocs.io/en/latest/).
 

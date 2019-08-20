@@ -1,7 +1,7 @@
 {{ ansible_managed | comment }}
 
 [Unit]
-Description=process_exporter
+Description=Process Exporter for Prometheus
 After=network-online.target
 StartLimitInterval=0
 
@@ -9,7 +9,12 @@ StartLimitInterval=0
 Type=simple
 User={{ process_exporter_system_user }}
 Group={{ process_exporter_system_group }}
-ExecStart=/usr/local/bin/process_exporter
+ExecStart=/usr/local/bin/process_exporter \
+{% if process_exporter_names != [] -%}
+	--config.path {{ process_exporter_config_dir }}/config.yaml \
+{% endif -%}
+	--web.listen-address={{ process_exporter_web_listen_address }}
+
 SyslogIdentifier=process_exporter
 Restart=always
 RestartSec=1
