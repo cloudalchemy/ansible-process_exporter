@@ -1,6 +1,6 @@
 # Ansible Role: process_exporter
 
-[![Build Status](https://travis-ci.org/cloudalchemy/ansible-process_exporter.svg?branch=master)](https://travis-ci.org/cloudalchemy/ansible-process_exporter)
+[![Build Status](https://travis-ci.com/cloudalchemy/ansible-process_exporter.svg?branch=master)](https://travis-ci.com/cloudalchemy/ansible-process_exporter)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Ansible Role](https://img.shields.io/badge/ansible%20role-cloudalchemy.process_exporter-blue.svg)](https://galaxy.ansible.com/cloudalchemy/process_exporter/)
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-process_exporter.svg)](https://github.com/cloudalchemy/ansible-process_exporter/tags)
@@ -41,7 +41,7 @@ Use it in a playbook as follows:
 The preferred way of locally testing the role is to use Docker and [molecule](https://github.com/metacloud/molecule) (v2.x). You will have to install Docker on your system. See "Get started" for a Docker package suitable to for your system.
 We are using tox to simplify process of testing on multiple ansible versions. To install tox execute:
 ```sh
-pip install tox
+pip3 install tox
 ```
 To run tests on all ansible versions (WARNING: this can take some time)
 ```sh
