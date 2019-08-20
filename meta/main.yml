@@ -2,9 +2,10 @@
 galaxy_info:
   author: Pawel Krupa
   description: Deploy process_exporter
-  license: MIT
-  min_ansible_version: 2.6
   role_name: process_exporter
+  license: MIT
+  company: none
+  min_ansible_version: 2.6
   platforms:
     - name: Ubuntu
       versions:
@@ -19,7 +20,7 @@ galaxy_info:
         - 7
     - name: Fedora
       versions:
-        - 27
+        - 30
   galaxy_tags:
     - monitoring
 
