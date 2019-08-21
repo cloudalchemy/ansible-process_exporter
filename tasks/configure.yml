@@ -13,10 +13,10 @@
     dest: "{{ process_exporter_config_dir }}/config.yml"
     content: |
       process_names:
-      {{ process_exporter_names | to_nice_yaml }}
+      {{ process_exporter_names }}
     backup: false
     owner: root
-    mode: 0640
+    mode: 0644
   when:
     - process_exporter_names != []
 
