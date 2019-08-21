@@ -8,7 +8,9 @@
 
 ## Description
 
-Deploy [process_exporter](https://github.com/ncabatoff/process-exporter) using ansible.
+Deploy [process-exporter](https://github.com/ncabatoff/process-exporter) using ansible.
+
+Note. This repository and role uses the name process_exporter to conform with ansible galaxy constraints.
 
 ## Requirements
 
