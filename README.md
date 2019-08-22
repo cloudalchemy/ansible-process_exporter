@@ -25,7 +25,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `process_exporter_version` | 0.5.0 | Process exporter package version. Also accepts latest as parameter |
 | `process_exporter_web_listen_address` | "0.0.0.0:9256" | Address on which process_exporter will listen |
 | `process_exporter_config_dir` | "/etc/process_exporter" | Path to directory with process_exporter configuration |
-| `process_exporter_names` | [] | Processes which should be monitored. Syntax is the same as in https://github.com/ncabatoff/process-exporter#using-a-config-file |
+| `process_exporter_names` | [defaults/main.yml#L8] | Processes which should be monitored. Syntax is the same as in https://github.com/ncabatoff/process-exporter#using-a-config-file Default is consistent with deb/rpm packages.|
 
 ## Example
 

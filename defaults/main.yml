@@ -6,4 +6,7 @@ process_exporter_web_listen_address: "0.0.0.0:9256"
 process_exporter_config_dir: '/etc/process_exporter'
 
 # Process names
-process_exporter_names: []
+process_exporter_names:
+  - name: "{{.Comm}}"
+    cmdline:
+    - '.+'
