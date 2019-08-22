@@ -9,4 +9,4 @@ process_exporter_config_dir: '/etc/process_exporter'
 process_exporter_names:
   - name: "{{.Comm}}"
     cmdline:
-    - '.+'
+      - '.+'
