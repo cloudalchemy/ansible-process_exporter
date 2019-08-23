@@ -8,7 +8,7 @@ process_exporter_config_dir: '/etc/process_exporter'
 # Process names
 # "raw" section is needed to avoid attempted interpretation 
 # of process-exporter Template varables (like {{.Comm}})
-process_exporter_names: |
+process_exporter_names: |-
   {% raw %}
     - name: "{{.Comm}}"
       cmdline:
