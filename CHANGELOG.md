@@ -8,6 +8,7 @@
 
 **Merged pull requests:**
 
+- process\_exporter\_names restart [\#13](https://github.com/cloudalchemy/ansible-process_exporter/pull/13) ([gajowi](https://github.com/gajowi))
 - Default names [\#11](https://github.com/cloudalchemy/ansible-process_exporter/pull/11) ([gajowi](https://github.com/gajowi))
 - make config file readable [\#9](https://github.com/cloudalchemy/ansible-process_exporter/pull/9) ([gajowi](https://github.com/gajowi))
 - fix config file extension [\#8](https://github.com/cloudalchemy/ansible-process_exporter/pull/8) ([gajowi](https://github.com/gajowi))
