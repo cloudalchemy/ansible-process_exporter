@@ -1,13 +1,20 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/process_exporter)
+## [0.1.0](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2019-11-14)
+**Merged pull requests:**
 
+- \[REPO SYNC\] molecule: use CI images from quay.io instead of dockerhub [\#16](https://github.com/cloudalchemy/ansible-process_exporter/pull/16) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
+## [0.0.0](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2019-11-05)
 **Closed issues:**
 
+- update of process\_exporter\_names needs reload/restart [\#12](https://github.com/cloudalchemy/ansible-process_exporter/issues/12)
 - default process\_exporter\_names [\#10](https://github.com/cloudalchemy/ansible-process_exporter/issues/10)
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] Update releaser.sh [\#15](https://github.com/cloudalchemy/ansible-process_exporter/pull/15) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- \[REPO SYNC\] add support for CentOS8 [\#14](https://github.com/cloudalchemy/ansible-process_exporter/pull/14) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - process\_exporter\_names restart [\#13](https://github.com/cloudalchemy/ansible-process_exporter/pull/13) ([gajowi](https://github.com/gajowi))
 - Default names [\#11](https://github.com/cloudalchemy/ansible-process_exporter/pull/11) ([gajowi](https://github.com/gajowi))
 - make config file readable [\#9](https://github.com/cloudalchemy/ansible-process_exporter/pull/9) ([gajowi](https://github.com/gajowi))
