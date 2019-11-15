@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/process_exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#18](https://github.com/cloudalchemy/ansible-process_exporter/pull/18) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.1.0](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2019-11-14)
 **Merged pull requests:**
 
