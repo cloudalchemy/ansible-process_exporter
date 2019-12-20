@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] remove IRC link [\#20](https://github.com/cloudalchemy/ansible-process_exporter/pull/20) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] .github/workflows: less frequent label sync [\#19](https://github.com/cloudalchemy/ansible-process_exporter/pull/19) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#18](https://github.com/cloudalchemy/ansible-process_exporter/pull/18) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
