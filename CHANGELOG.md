@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/process_exporter)
-
+## [0.1.1](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2020-01-01)
 **Merged pull requests:**
 
+- New ncabatoff/process-exporter upstream release! [\#21](https://github.com/cloudalchemy/ansible-process_exporter/pull/21) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] remove IRC link [\#20](https://github.com/cloudalchemy/ansible-process_exporter/pull/20) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] .github/workflows: less frequent label sync [\#19](https://github.com/cloudalchemy/ansible-process_exporter/pull/19) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add declarative label sync; add autolabelling PRs [\#18](https://github.com/cloudalchemy/ansible-process_exporter/pull/18) ([cloudalchemybot](https://github.com/cloudalchemybot))
