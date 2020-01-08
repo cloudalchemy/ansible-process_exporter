@@ -1,5 +1,11 @@
 # Change Log
 
+## [**Next release**](https://galaxy.ansible.com/cloudalchemy/process_exporter)
+
+**Merged pull requests:**
+
+- \[REPO SYNC\] use latest available python [\#23](https://github.com/cloudalchemy/ansible-process_exporter/pull/23) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
 ## [0.1.1](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2020-01-01)
 **Merged pull requests:**
 
