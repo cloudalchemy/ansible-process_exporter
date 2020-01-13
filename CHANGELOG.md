@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#24](https://github.com/cloudalchemy/ansible-process_exporter/pull/24) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] use latest available python [\#23](https://github.com/cloudalchemy/ansible-process_exporter/pull/23) ([cloudalchemybot](https://github.com/cloudalchemybot))
 
 ## [0.1.1](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2020-01-01)
