@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- \[REPO SYNC\] add troubleshooting doc skeleton [\#27](https://github.com/cloudalchemy/ansible-process_exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Add passlib as a test requirement [\#26](https://github.com/cloudalchemy/ansible-process_exporter/pull/26) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] lock molecule to v2 [\#25](https://github.com/cloudalchemy/ansible-process_exporter/pull/25) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Merge pull request \#4 from cloudalchemy/travis\_fix [\#24](https://github.com/cloudalchemy/ansible-process_exporter/pull/24) ([cloudalchemybot](https://github.com/cloudalchemybot))
