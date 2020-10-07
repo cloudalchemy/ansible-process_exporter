@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- New ncabatoff/process-exporter upstream release! [\#28](https://github.com/cloudalchemy/ansible-process_exporter/pull/28) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add troubleshooting doc skeleton [\#27](https://github.com/cloudalchemy/ansible-process_exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Add passlib as a test requirement [\#26](https://github.com/cloudalchemy/ansible-process_exporter/pull/26) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] lock molecule to v2 [\#25](https://github.com/cloudalchemy/ansible-process_exporter/pull/25) ([cloudalchemybot](https://github.com/cloudalchemybot))
