@@ -14,6 +14,8 @@
     name: "{{ process_exporter_system_group }}"
     state: present
     system: true
+  when:
+    - process_exporter_system_group != "root"
 
 - name: Create the process_exporter user
   user:
@@ -24,6 +26,8 @@
     system: true
     createhome: false
     home: /
+  when:
+    - process_exporter_system_user != "root"
 
 - name: create prometheus data directory
   file:
