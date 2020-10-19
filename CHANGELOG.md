@@ -1,9 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/process_exporter)
-
+## [0.2.0](https://galaxy.ansible.com/cloudalchemy/process_exporter) (2020-10-19)
 **Merged pull requests:**
 
+- fix user and group creation [\#29](https://github.com/cloudalchemy/ansible-process_exporter/pull/29) ([tombokombo](https://github.com/tombokombo))
 - New ncabatoff/process-exporter upstream release! [\#28](https://github.com/cloudalchemy/ansible-process_exporter/pull/28) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] add troubleshooting doc skeleton [\#27](https://github.com/cloudalchemy/ansible-process_exporter/pull/27) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - \[REPO SYNC\] Add passlib as a test requirement [\#26](https://github.com/cloudalchemy/ansible-process_exporter/pull/26) ([cloudalchemybot](https://github.com/cloudalchemybot))
