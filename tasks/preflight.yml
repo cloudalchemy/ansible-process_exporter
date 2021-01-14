@@ -42,7 +42,7 @@
 
 - name: Get checksum list from github
   set_fact:
-    _checksums: "{{ lookup('url', 'https://github.com/ncabatoff/process-exporter/releases/download/v' + process_exporter_version + '/' + 'process-exporter_' + process_exporter_version + '_checksums.txt', wantlist=True) | list }}"
+    _checksums: "{{ lookup('url', 'https://github.com/ncabatoff/process-exporter/releases/download/v' + process_exporter_version + '/checksums.txt', wantlist=True) | list }}"
   run_once: true
 
 - name: "Get checksum for {{ go_arch }} architecture"
