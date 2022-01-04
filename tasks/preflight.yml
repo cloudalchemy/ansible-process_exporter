@@ -41,8 +41,10 @@
   run_once: true
 
 - name: Get checksum list from github
+  vars:
+    _prefix: "{{ 'process-exporter_' + process_exporter_version + '_' if (process_exporter_version is version('0.7.3', '<=')) else '' }}"
   set_fact:
-    _checksums: "{{ lookup('url', 'https://github.com/ncabatoff/process-exporter/releases/download/v' + process_exporter_version + '/checksums.txt', wantlist=True) | list }}"
+    _checksums: "{{ lookup('url', 'https://github.com/ncabatoff/process-exporter/releases/download/v' + process_exporter_version + '/' + _prefix + 'checksums.txt', wantlist=True) | list }}"
   run_once: true
 
 - name: "Get checksum for {{ go_arch }} architecture"
