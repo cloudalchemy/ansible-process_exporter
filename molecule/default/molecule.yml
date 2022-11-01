@@ -9,23 +9,9 @@ driver:
 #   ansible-lint
 #   flake8
 platforms:
-  - name: bionic
+  - name: focal
     pre_build_image: true
-    image: quay.io/paulfantom/molecule-systemd:ubuntu-18.04
-    docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
-    privileged: true
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-  - name: xenial
-    pre_build_image: true
-    image: quay.io/paulfantom/molecule-systemd:ubuntu-16.04
-    docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
-    privileged: true
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-  - name: stretch
-    pre_build_image: true
-    image: quay.io/paulfantom/molecule-systemd:debian-9
+    image: quay.io/paulfantom/molecule-systemd:ubuntu-20.04
     docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
     privileged: true
     volumes:
@@ -55,7 +41,7 @@ platforms:
       - python3
   - name: fedora
     pre_build_image: true
-    image: quay.io/paulfantom/molecule-systemd:fedora-30
+    image: quay.io/paulfantom/molecule-systemd:fedora-34
     docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
     privileged: true
     volumes:

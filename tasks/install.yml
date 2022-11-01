@@ -29,7 +29,7 @@
   when:
     - process_exporter_system_user != "root"
 
-- name: create prometheus data directory
+- name: create process_exporter data directory
   file:
     path: "{{ process_exporter_config_dir }}"
     state: directory
@@ -37,40 +37,55 @@
     group: "{{ process_exporter_system_group }}"
     mode: 0755
 
-- name: Download process_exporter binary to local folder
-  become: false
-  get_url:
-    url: "https://github.com/ncabatoff/process-exporter/releases/download/v{{ process_exporter_version }}/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
-    dest: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
-    checksum: "sha256:{{ process_exporter_checksum }}"
-  register: _download_binary
-  until: _download_binary is succeeded
-  retries: 5
-  delay: 2
-  delegate_to: localhost
-  check_mode: false
-
-- name: Unpack process_exporter binary
-  become: false
-  unarchive:
-    src: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
-    dest: "/tmp"
-    creates: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}/process-exporter"
-  delegate_to: localhost
-  check_mode: false
-
 - name: Create /usr/local/bin
   file:
     path: /usr/local/bin
     state: directory
     mode: 0755
 
+- block:
+  - name: Download process_exporter binary to local folder
+    become: false
+    get_url:
+      url: "https://github.com/ncabatoff/process-exporter/releases/download/v{{ process_exporter_version }}/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
+      dest: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
+      checksum: "sha256:{{ process_exporter_checksum }}"
+    register: _download_binary
+    until: _download_binary is succeeded
+    retries: 5
+    delay: 2
+    delegate_to: localhost
+    check_mode: false
+
+  - name: Unpack process_exporter binary
+    become: false
+    unarchive:
+      src: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}.tar.gz"
+      dest: "/tmp"
+      creates: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}/process-exporter"
+    delegate_to: localhost
+    check_mode: false
+
+  - name: Propagate process_exporter binaries
+    copy:
+      src: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}/process-exporter"
+      dest: "/usr/local/bin/process_exporter"
+      mode: 0755
+      owner: root
+      group: root
+    notify: restart process_exporter
+  when:
+    - not ansible_check_mode
+    - process_exporter_binary_local_dir | length == 0
+
 - name: Propagate process_exporter binaries
   copy:
-    src: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}/process-exporter"
+    src: "{{ process_exporter_binary_local_dir }}/process-exporter"
     dest: "/usr/local/bin/process_exporter"
     mode: 0755
     owner: root
     group: root
   notify: restart process_exporter
-  when: not ansible_check_mode
+  when:
+    - not ansible_check_mode
+    - process_exporter_binary_local_dir | length > 0

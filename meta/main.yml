@@ -10,10 +10,8 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - bionic
-        - xenial
     - name: Debian
       versions:
-        - stretch
         - buster
     - name: EL
       versions:
@@ -21,8 +19,7 @@ galaxy_info:
         - 8
     - name: Fedora
       versions:
-        - 30
-        - 31
+        - 34
   galaxy_tags:
     - monitoring
 
