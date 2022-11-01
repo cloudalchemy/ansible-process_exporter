@@ -39,7 +39,7 @@
   when: 
     - process_exporter_version == "latest"
     - not ansible_check_mode
-    - pushgateway_binary_local_dir | length == 0
+    - process_exporter_binary_local_dir | length == 0
   delegate_to: localhost
   run_once: true
 
@@ -58,5 +58,5 @@
     when: _checksums and "('linux-' + go_arch + '.tar.gz') in item"
   when:
     - not ansible_check_mode
-    - pushgateway_binary_local_dir | length == 0
+    - process_exporter_binary_local_dir | length == 0
 
