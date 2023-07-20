@@ -26,8 +26,8 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `process_exporter_config_dir` | "/etc/process_exporter" | Path to directory with process_exporter configuration |
 | `process_exporter_names` | [see: defaults/main.yml](defaults/main.yml#L8) | Processes which should be monitored. Syntax is the same as in https://github.com/ncabatoff/process-exporter#using-a-config-file Default is consistent with deb/rpm packages.|
 | `process_exporter_system_user`| "process-exp" | System user under which the process_explorer will run. Useful change to "root" if you need some metrics like proportionalResident memory bytes.|
-| `process_exporter_system_group`| "process-exp" | System group under which the process_explorer will run.
-|
+| `process_exporter_system_group`| "process-exp" | System group under which the process_explorer will run.|
+
 
 `process_exporter_names` handling has been set up in an unusual way to handle recommended process-exporter 'Template variables' (such as {{.Comm}}). Follow the example in [defaults/main.yml](defaults/main.yml) if you want to define custom filtering/grouping of processes that use Template variables and make sure to keep the {% raw %} block delimiters.
 
