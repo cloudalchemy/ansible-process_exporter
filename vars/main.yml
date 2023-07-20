@@ -8,5 +8,3 @@ go_arch_map:
 
 go_arch: "{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}"
 
-process_exporter_system_user: "process-exp"
-process_exporter_system_group: "process-exp"
