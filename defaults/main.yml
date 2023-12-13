@@ -5,6 +5,9 @@ process_exporter_web_listen_address: "0.0.0.0:9256"
 
 process_exporter_config_dir: '/etc/process_exporter'
 
+process_exporter_system_user: "process-exp"
+process_exporter_system_group: "process-exp"
+
 # Process names
 # "raw" section is needed to avoid attempted interpretation
 # of process-exporter Template varables (like {{.Comm}})
