@@ -14,6 +14,7 @@ Note. This repository and role uses the name process_exporter to conform with an
 ## Requirements
 
 - Ansible >= 2.7 (It might work on previous versions, but we cannot guarantee it)
+- GNU Tar (If you are using macOS, install it using `brew install gnu-tar`)
 
 ## Role Variables
 
