@@ -9,7 +9,7 @@ StartLimitInterval=0
 Type=simple
 User={{ process_exporter_system_user }}
 Group={{ process_exporter_system_group }}
-ExecStart=/usr/local/bin/process_exporter \
+ExecStart={{ process_exporter_bin_dir }}/process_exporter \
 {% if process_exporter_names != [] -%}
 	--config.path {{ process_exporter_config_dir }}/config.yml \
 {% endif -%}

@@ -59,16 +59,16 @@
   delegate_to: localhost
   check_mode: false
 
-- name: Create /usr/local/bin
+- name: Ensure binary directory exists
   file:
-    path: /usr/local/bin
+    path: "{{ process_exporter_bin_dir }}"
     state: directory
     mode: 0755
 
 - name: Propagate process_exporter binaries
   copy:
     src: "/tmp/process-exporter-{{ process_exporter_version }}.linux-{{ go_arch }}/process-exporter"
-    dest: "/usr/local/bin/process_exporter"
+    dest: "{{ process_exporter_bin_dir }}/process_exporter"
     mode: 0755
     owner: root
     group: root

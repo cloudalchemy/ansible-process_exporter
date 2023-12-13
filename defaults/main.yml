@@ -4,6 +4,7 @@ process_exporter_version: 0.7.5
 process_exporter_web_listen_address: "0.0.0.0:9256"
 
 process_exporter_config_dir: '/etc/process_exporter'
+process_exporter_bin_dir: '/usr/local/bin'
 
 process_exporter_system_user: "process-exp"
 process_exporter_system_group: "process-exp"
