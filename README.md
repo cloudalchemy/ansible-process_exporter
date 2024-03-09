@@ -1,3 +1,7 @@
+# DEPRECATED
+
+**This role has been deprecated in favor of a the [prometheus-community/ansible](https://github.com/prometheus-community/ansible) collection.**
+
 # Ansible Role: process_exporter
 
 [![Build Status](https://travis-ci.com/cloudalchemy/ansible-process_exporter.svg?branch=master)](https://travis-ci.com/cloudalchemy/ansible-process_exporter)
